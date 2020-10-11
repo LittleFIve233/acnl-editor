@@ -1,7 +1,7 @@
 # 动物之森存档修改器
 ACNL Save Editor lets you edit your Animal Crossing: New Leaf savegame. 
 
-## Features
+## 功能
 * can edit any ACNL savegame (including Welcome Amiibo)
 * can edit your town
   * acres, river, waterfalls and ponds
@@ -20,11 +20,11 @@ ACNL Save Editor lets you edit your Animal Crossing: New Leaf savegame.
   * place unused players' patterns on ground
   * ...and more!
  
-## Warning
+## 注意
 **This app can damage your savegame if not used correctly. I'm not responsible of any data lost.
 Be careful when editing your savegame, always keep a backup of your previous savegame.**
 
-## How to dump and inject AC:NL savegame
+## 怎么导出或导入动物之森存档
 More info here:
-[How to dump and inject AC:NL savegame](http://www.marcrobledo.com/acnl-editor/help.html#Howto)
-[FAQ](http://www.marcrobledo.com/acnl-editor/help.html#FAQ)
+[How to dump and inject AC:NL savegame](http://FIve201.github.io/acnl-editor/help.html#Howto)
+[FAQ](http://FIve201.github.io/acnl-editor/help.html#FAQ)
