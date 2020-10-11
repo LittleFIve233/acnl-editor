@@ -94,7 +94,7 @@
 		<span>Island</span>
 		<span>Villagers</span>
 		<span>Shops</span>
-		<span>Others</span>
+		<span>Other</span>
 	</div>
 	<button id="save-button" onclick="saveChanges()"><span class="sprite save-icon"></span> 保存更改</button>
 </div>
@@ -131,7 +131,7 @@
 
 	<div class="row">
 		<div class="column column-5">
-			<h3>村子大小</h3>
+			<h3>村子结构</h3>
 			<div id="map-acres"></div>
 		</div>
 
@@ -177,11 +177,11 @@
 					<td><input type="text" id="player-name" maxlength="9" onchange="currentPlayer.setName(this.value)" /> <span id="player-id" class="mono"></span></td>
 				</tr>
 				<tr>
-					<td><label for="player-tpctext">TPC text:</label></td>
+					<td><label for="player-tpctext">签名:</label></td>
 					<td><input type="text" id="player-tpctext" maxlength="32" onchange="currentPlayer.TPCtext.set(this.value)" /></td>
 				</tr>
 				<tr>
-					<td><label for="select-gender">Gender:</label></td>
+					<td><label for="select-gender">性别:</label></td>
 					<td><select id="select-gender"></select></td>
 				</tr>
 				<tr>
@@ -189,27 +189,27 @@
 					<td><select id="select-tan"></select></td>
 				</tr>
 				<tr>
-					<td><label for="select-hairstyle">Hair style:</label></td>
+					<td><label for="select-hairstyle">发型:</label></td>
 					<td><select id="select-hairstyle"></select> <span id="span-hair-style"></span></td>
 				</tr>
 				<tr>
-					<td><label for="select-haircolor">Hair color:</label></td>
+					<td><label for="select-haircolor">发色:</label></td>
 					<td><select id="select-haircolor"></select> <span id="span-hair-color"></span></td>
 				</tr>
 				<tr>
-					<td><label for="select-eyecolor">Eye color:</label></td>
+					<td><label for="select-eyecolor">美瞳颜色:</label></td>
 					<td><select id="select-eyecolor"></select> <span id="span-eye-color"></span></td>
 				</tr>
 				<tr>
-					<td><label for="select-face">Face:</label></td>
+					<td><label for="select-face">脸型:</label></td>
 					<td><select id="select-face"></select> <span id="span-face"></span></td>
 				</tr>
 				<tr>
-					<td>Playtime:</td>
+					<td>游戏时间:</td>
 					<td><span id="player-playtime"></span></td>
 				</tr>
 				<tr>
-					<td>Birthday:</td>
+					<td>生日:</td>
 					<td><select id="select-birthday-day"></select> <select id="select-birthday-month"></select></td>
 				</tr>
 				<tr>
@@ -217,15 +217,15 @@
 					<td><select id="select-registration-day"></select> <select id="select-registration-month"></select> <select id="select-registration-year"></select></td>
 				</tr>
 				<tr>
-					<td><label for="input-bells">Bells:</label></td>
+					<td><label for="input-bells">口袋持有贝鲁:</label></td>
 					<td><input type="text" id="input-bells"/></td>
 				</tr>
 				<tr>
-					<td><label for="input-bank">Bank:</label></td>
+					<td><label for="input-bank">银行存款:</label></td>
 					<td><input type="text" id="input-bank"/></td>
 				</tr>
 				<tr>
-					<td><label for="input-medals">Island medals:</label></td>
+					<td><label for="input-medals">南岛奖章:</label></td>
 					<td><input type="text" id="input-medals"/></td>
 				</tr>
 				<tr id="tr-meowcoupons">
@@ -233,11 +233,11 @@
 					<td><input type="text" id="input-meow"/></td>
 				</tr>
 				<tr>
-					<td><label for="button-change-tpc">TPC Pic:</label></td>
-					<td><button id="button-change-tpc" onclick="changeTPCPic()">Change</button></td>
+					<td><label for="button-change-tpc">TPC 图片:</label></td>
+					<td><button id="button-change-tpc" onclick="changeTPCPic()">变更</button></td>
 				</tr>
 				<tr>
-					<td>Cheats:</td>
+					<td>箱子:</td>
 					<td id="player-cheats">
 						<button onclick="currentPlayer.fillEncyclopedia()">Encyclopedia</button>
 						<button onclick="currentPlayer.unlockEmotions()">Emotions</button>
@@ -250,14 +250,14 @@
 			<h3 class="no-separation">持有物品</h3>
 
 			<div class="row">
-				<div class="column column-12" id="pockets">Pockets: </div>
+				<div class="column column-12" id="pockets">口袋: </div>
 
 				<div class="column column-3" id="dresser0">Dresser A:<br/></div>
 				<div class="column column-3" id="dresser1">Dresser B:<br/></div>
 				<div class="column column-3" id="dresser2">Dresser C:<br/></div>
-				<div class="column column-3" id="islandbox">Island box:<br/></div>
+				<div class="column column-3" id="islandbox">南岛盒子:<br/></div>
 
-				<div class="column column-12" id="column-storage">Storage room:</div>
+				<div class="column column-12" id="column-storage">储存间:</div>
 				<div class="column column-3" id="storage0"></div>
 				<div class="column column-3" id="storage1"></div>
 				<div class="column column-3" id="storage2"></div>
@@ -267,7 +267,7 @@
 	</div>
 
 	<div class="row">
-		<h3>House exterior</h3>
+		<h3>房子外观</h3>
 		<div class="column column-5">
 			<table>
 				<tr><td><label for="select-house-style">House style:</label></td><td><select id="select-house-style"></select></td></tr>
@@ -287,40 +287,40 @@
 
 	<div class="row">
 		<div class="column column-4">
-			<h3>Patterns</h3>
+			<h3>图画</h3>
 			<div id="patterns0" class="player-patterns"></div>
 			<div id="patterns1" class="player-patterns"></div>
 			<div id="patterns2" class="player-patterns"></div>
 			<div id="patterns3" class="player-patterns"></div>
 		</div>
 		<div class="column column-7">
-			<h3>Badges</h3>
+			<h3>徽章</h3>
 			<ul id="badges"></ul>
 		</div>
 	</div>
 
 	<div class="row">
 		<div class="column column-5 room-container" id="rooms0">
-			<h3>Main room</h3>
+			<h3>主房间</h3>
 		</div>
 		<div class="column column-5 room-container" id="rooms1">
-			<h3>Attic</h3>
+			<h3>二楼</h3>
 		</div>
 	</div>
 	<div class="row">
 		<div class="column column-5 room-container" id="rooms2">
-			<h3>Basement</h3>
+			<h3>地下室</h3>
 		</div>
 		<div class="column column-5 room-container" id="rooms3">
-			<h3>East room</h3>
+			<h3>右房间</h3>
 		</div>
 	</div>
 	<div class="row">
 		<div class="column column-5 room-container" id="rooms4">
-			<h3>West room</h3>
+			<h3>左房间</h3>
 		</div>
 		<div class="column column-5 room-container" id="rooms5">
-			<h3>North room</h3>
+			<h3>里房间</h3>
 		</div>
 	</div>
 </div>
@@ -331,13 +331,13 @@
 
 	<div class="row">
 		<div class="column column-5">
-			<h3>Acres</h3>
+			<h3>结构</h3>
 			<div id="island-acres"></div><br/>
 			<button onclick="tempFileLoadFunction=importIsland; el('file-load').accept='.dat';el('file-load').click()">Import map</button>
 		</div>
 
 		<div class="column column-5">
-			<h3>Buildings</h3>
+			<h3>建筑</h3>
 			<ul id="buildings-island" class="building-list"></ul>
 		</div>
 	</div>
@@ -349,16 +349,16 @@
 		<tr><td>Retail:</td><td><div id="shop-retail"></div></td></tr>
 		<tr><td>T&amp;T:</td><td><div id="shop-nook"></div></td></tr>
 		<tr><td>Gracie:</td><td><div id="shop-gracie"></div></td></tr>
-		<tr><td>Nook's homes:</td><td><div id="shop-homes"></div></td></tr>
+		<tr><td>尼克鞋店:</td><td><div id="shop-homes"></div></td></tr>
 		<tr><td>Leif:</td><td><div id="shop-leif"></div></td></tr>
 		<tr><td>Able sisters (clothes):</td><td><div id="shop-able1"></div></td></tr>
 		<tr><td>Able sisters (accesories):</td><td><div id="shop-able2"></div></td></tr>
 		<tr><td>Able sisters (patterns):</td><td><div id="labelle" class="patterns-labelle"></div></td></tr>
 		<tr><td>Kicks:</td><td><div id="shop-kicks"></div></td></tr>
 		<tr><td>Redd:</td><td><div id="shop-redd"></div></td></tr>
-		<tr><td>Island shop:</td><td><div id="shop-island"></div></td></tr>
-		<tr><td>Museum shop:</td><td><div id="shop-museum"></div></td></tr>
-		<tr><td>Lost &amp; found:</td><td><div id="lostfound"></div></td></tr>
+		<tr><td>南岛商店:</td><td><div id="shop-island"></div></td></tr>
+		<tr><td>博物馆商店:</td><td><div id="shop-museum"></div></td></tr>
+		<tr><td>失物招领处:</td><td><div id="lostfound"></div></td></tr>
 		<tr><td>Club LOL gyroids:</td><td><div id="lol-gyroids"></div></td></tr>
 		<tr id="tr-shop-harvey"><td>Harvey:</td><td><div id="shop-harvey"></div></td></tr>
 		<tr>
@@ -367,12 +367,12 @@
 				<table>
 					<tr><th></th><th>AM</th><th>PM</th></tr>
 					<tbody id="table-turnip-prices">
-						<tr><td>Monday</td></tr>
-						<tr><td>Tuesday</td></tr>
-						<tr><td>Wednesday</td></tr>
-						<tr><td>Thursday</td></tr>
-						<tr><td>Friday</td></tr>
-						<tr><td>Saturday</td></tr>
+						<tr><td>周一</td></tr>
+						<tr><td>周二</td></tr>
+						<tr><td>周三</td></tr>
+						<tr><td>周四</td></tr>
+						<tr><td>周五</td></tr>
+						<tr><td>周六</td></tr>
 					</tbody>
 				</table>
 			</td>
@@ -390,7 +390,7 @@
 
 	<div class="row">
 		<div class="column column-5">
-			<h3>Past villagers</h3>
+			<h3>当前村民</h3>
 			<div class="row">
 				<div class="column column-6"><table id="past-villagers1"></table></div>
 				<div class="column column-6"><table id="past-villagers2"></table></div>
@@ -399,42 +399,42 @@
 		</div>
 
 		<div class="column column-5" id="column-caravan">
-			<h3>Campsite &amp; caravans</h3>
+			<h3>露营地和露营车</h3>
 			<table id="caravan-villagers"></table>
 		</div>
 	</div>
 </div>
 
 <div id="tab-other" style="display:none">
-	<h3 class="no-separation">Town info</h3>
+	<h3 class="no-separation">村子信息</h3>
 	<div class="row">
 		<div class="column column-5">
 			<table>
 				<tr>
-					<td>Town name/SID:</td><td><div id="town-name"></div> <span id="town-id" class="mono"></span></td>
+					<td>村子名字/SID:</td><td><div id="town-name"></div> <span id="town-id" class="mono"></span></td>
 				</tr>
 				<tr>
-					<td><label for="nativefruit">Native fruit:</label></td><td><select id="select-nativefruit"></select></td>
+					<td><label for="nativefruit">村子水果:</label></td><td><select id="select-nativefruit"></select></td>
 				</tr>
 				<tr>
-					<td><label for="grasstype">Grass type:</label></td><td><select id="select-grasstype"></select></td>
+					<td><label for="grasstype">草的类型:</label></td><td><select id="select-grasstype"></select></td>
 				</tr>
 				<tr>
-					<td><label for="grasstype">Grass type (island):</label></td><td><select id="select-grasstypeisland"></select></td>
+					<td><label for="grasstype">草的类型(南岛):</label></td><td><select id="select-grasstypeisland"></select></td>
 				</tr>
 				<tr>
-					<td><label for="townhallcolor">Town hall color:</label></td><td><select id="select-townhallcolor"></select></td>
+					<td><label for="townhallcolor">村公所颜色:</label></td><td><select id="select-townhallcolor"></select></td>
 				</tr>
 				<tr>
-					<td><label for="trainstationcolor">Train station color:</label></td><td><select id="select-trainstationcolor"></select></td>
+					<td><label for="trainstationcolor">车站颜色:</label></td><td><select id="select-trainstationcolor"></select></td>
 				</tr>
 				<tr>
-					<td>Town ordinances</td>
+					<td>村子类型</td>
 					<td>
-						<label for="checkbox-ordinance0"><input id="checkbox-ordinance0" type="checkbox" onchange="town.currentOrdinances[0]=this.checked;if(town.currentOrdinances[0] && town.currentOrdinances[1]){town.currentOrdinances[1]=false;el('checkbox-ordinance1').checked=false;}"/> Early bird</label><br/>
-						<label for="checkbox-ordinance1"><input id="checkbox-ordinance1" type="checkbox" onchange="town.currentOrdinances[1]=this.checked;if(town.currentOrdinances[0] && town.currentOrdinances[0]){town.currentOrdinances[0]=false;el('checkbox-ordinance0').checked=false;}"/> Night owl</label><br/>
-						<label for="checkbox-ordinance2"><input id="checkbox-ordinance2" type="checkbox" onchange="town.currentOrdinances[2]=this.checked"/> Bell boom</label><br/>
-						<label for="checkbox-ordinance3"><input id="checkbox-ordinance3" type="checkbox" onchange="town.currentOrdinances[3]=this.checked"/> Keep town beautiful</label>
+						<label for="checkbox-ordinance0"><input id="checkbox-ordinance0" type="checkbox" onchange="town.currentOrdinances[0]=this.checked;if(town.currentOrdinances[0] && town.currentOrdinances[1]){town.currentOrdinances[1]=false;el('checkbox-ordinance1').checked=false;}"/> 早起村</label><br/>
+						<label for="checkbox-ordinance1"><input id="checkbox-ordinance1" type="checkbox" onchange="town.currentOrdinances[1]=this.checked;if(town.currentOrdinances[0] && town.currentOrdinances[0]){town.currentOrdinances[0]=false;el('checkbox-ordinance0').checked=false;}"/> 不眠村</label><br/>
+						<label for="checkbox-ordinance2"><input id="checkbox-ordinance2" type="checkbox" onchange="town.currentOrdinances[2]=this.checked"/> 富贵村</label><br/>
+						<label for="checkbox-ordinance3"><input id="checkbox-ordinance3" type="checkbox" onchange="town.currentOrdinances[3]=this.checked"/> 美丽村</label>
 					</td>
 				</tr>
 			</table>
@@ -442,10 +442,10 @@
 		<div class="column column-5">
 			<table>
 				<tr>
-					<td><label for="towntreesize">Town tree size stage:</label></td><td><select id="select-towntreesize"></select></td>
+					<td><label for="towntreesize">村广场树木大小:</label></td><td><select id="select-towntreesize"></select></td>
 				</tr>
 				<tr>
-					<td>Playtime:</td><td><span id="town-playtime"></span><br/><span id="town-sessions"></span> days played</td>
+					<td>游玩时间:</td><td><span id="town-playtime"></span><br/><span id="town-sessions"></span> 游玩天数</td>
 				</tr>
 				<tr>
 					<td>Secure value:</td><td><span id="nand-value" class="mono"></span></td>
@@ -455,7 +455,7 @@
 					<td><button onclick="town.unlockHHDContent();">Unlock</button></td>
 				</tr>
 				<tr>
-					<td>Available PWPs:</td>
+					<td>可用的 PWPs:</td>
 					<td>
 						<ul id="pwps-available" class="binary-list"></ul>
 						<button onclick="town.availablePWPs.setAll(true)">Unlock all</button>
@@ -467,18 +467,18 @@
 
 	<div class="row">
 		<div id="museumroom0" class="column column-5 room-container">
-			<h3>Museum Room 1</h3>
+			<h3>博物馆房间 1</h3>
 		</div>
 		<div id="museumroom2" class="column column-5 room-container">
-			<h3>Museum Room 3</h3>
+			<h3>博物馆房间 3</h3>
 		</div>
 	</div>
 	<div class="row">
 		<div id="museumroom1" class="column column-5 room-container">
-			<h3>Museum Room 2</h3>
+			<h3>博物馆房间 2</h3>
 		</div>
 		<div id="museumroom3" class="column column-5 room-container">
-			<h3>Museum Room 4</h3>
+			<h3>博物馆房间 4</h3>
 		</div>
 	</div>
 </div>
@@ -490,7 +490,7 @@
 
 <!-- DIALOGS -->
 <div id="dialog-disclaimer" class="dialog">
-	<b>Disclaimer</b><br/><br/>
+	<b>免责声明</b><br/><br/>
 	如果你没有正确使用此工具，那么你的存档可能会损坏。<br/>
 	你应该对丢失的任何数据负责。<br/><br/>
 	<font color="red">编辑您的存档游戏时要小心，请始终保留以前存档的备份！</font>
@@ -534,7 +534,7 @@
 </div>
 
 <div id="dialog-acre" class="dialog">
-	Select an acre to replace.<br/>
+	选择一个结构来替换。<br/>
 	<b class="warning">警告！</b>无效的村子结构可能会在打开存档时造成死机。<a href="help.html#Warnings" class="help" target="_blank">更多信息</a>
 	<div id="acre-selector"></div>
 </div>
