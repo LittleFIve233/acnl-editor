@@ -57,7 +57,7 @@
 			</select>
 
 			<hr/>
-			<span id="loading">Loading editor, please wait...</span>
+			<span id="loading">正在加载修改器中，请稍等</span>
 			<form id="loadform" style="display:none">
 				 从这里打开你的<u>garden.dat</u>或<u>garden_plus.dat</u>:<br/>
 				<input type="file" accept=".dat" onchange="loadSavegameFromFile(this.files[0])"/>
@@ -72,29 +72,29 @@
 	<div id="itemsribbon">
 		<input type="text" id="search-input" onkeyup="searchItem(this.value)" onfocus="showSearchResults();" placeholder="Search item..." />
 		<ul id="search-results"></ul>
-		<label for="items">Current item:</label> <select id="items" onchange="buildFlagsSelects(0,0);"><option value="32766" id="item_32766">-</option><option value="32764" id="item_32764">- (occupied room tile) -</option><option value="32766" id="item_unk">unknown item</option></select>
-		<label for="flag1">Flag 1:</label>
+		<label for="items">当前物品:</label> <select id="items" onchange="buildFlagsSelects(0,0);"><option value="32766" id="item_32766">-</option><option value="32764" id="item_32764">- (occupied room tile) -</option><option value="32766" id="item_unk">未知物品</option></select>
+		<label for="flag1">旗子 1:</label>
 		<input type="text" id="flag1" disabled="disabled" length="2" oninput="cleanFlagInput(1)" maxlength="2"/>
 		<select id="select-flag1" onchange="setFlag(1, parseInt(this.value))">
-			<option value="-1">custom</option>
-			<option value="0" selected="selected">none</option>
+			<option value="-1">自定义</option>
+			<option value="0" selected="selected">无</option>
 		</select>
-		<label for="flag2">Flag 2:</label>
+		<label for="flag2">旗子 2:</label>
 		<input type="text" id="flag2" disabled="disabled" length="2" oninput="cleanFlagInput(2)" maxlength="2" />
 		<select id="select-flag2" onchange="setFlag(2,parseInt(this.value))">
-			<option value="-1">custom</option>
-			<option value="0" selected="selected">none</option>
+			<option value="-1">自定义</option>
+			<option value="0" selected="selected">无</option>
 		</select>
 	</div>
 
 	<span class="logo"></span>
 	<div id="tab-selector">
-		<span class="active">地图</span>
-		<span>玩家</span>
+		<span class="active">Map</span>
+		<span>Players</span>
 		<span>Island</span>
-		<span>村民</span>
-		<span>商店</span>
-		<span>其他</span>
+		<span>Villagers</span>
+		<span>Shops</span>
+		<span>Others</span>
 	</div>
 	<button id="save-button" onclick="saveChanges()"><span class="sprite save-icon"></span> Save changes</button>
 </div>
@@ -122,12 +122,12 @@
 
 	<br style="clear:both; display:block"/>
 	Options:
-	<button onclick="fillAll()">Fill all</button>
-	<button onclick="removeAll()">Remove all</button>
+	<button onclick="fillAll()">填充所有</button>
+	<button onclick="removeAll()">移除所有</button>
 	&nbsp;&nbsp;&nbsp;
 	<button onclick="MarcDialogs.open('maintenance')">Maintenance</button>
 	&nbsp;&nbsp;&nbsp;
-	<button onclick="tempFileLoadFunction=importMap; el('file-load').accept='.dat';el('file-load').click()">Import map</button>
+	<button onclick="tempFileLoadFunction=importMap; el('file-load').accept='.dat';el('file-load').click()">导入地图</button>
 
 	<div class="row">
 		<div class="column column-5">
