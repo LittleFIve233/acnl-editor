@@ -39,8 +39,8 @@
 		<div id="contribute"><a href="pay.html" target="_blank" rel="nofollow"><span>如果对你有帮助请点击这里捐赠我</span><span class="donate"><span class="sprite heart"></span> 捐赠</span></a></div>
 
 		<div class="block block-warning center open" id="block-warning">
-			使用此工具的风险由你自己承担.<br/>
-			使用它，你要对丢失的任何数据负责。
+			使用此工具的风险由你自己承担<br/>
+			使用它，你要对丢失的任何数据负责
 		</div>
 
 		<div class="block">
@@ -70,7 +70,7 @@
 <div id="header">
 
 	<div id="itemsribbon">
-		<input type="text" id="search-input" onkeyup="searchItem(this.value)" onfocus="showSearchResults();" placeholder="Search item..." />
+		<input type="text" id="search-input" onkeyup="searchItem(this.value)" onfocus="showSearchResults();" placeholder="搜寻物品..." />
 		<ul id="search-results"></ul>
 		<label for="items">当前物品:</label> <select id="items" onchange="buildFlagsSelects(0,0);"><option value="32766" id="item_32766">-</option><option value="32764" id="item_32764">- (occupied room tile) -</option><option value="32766" id="item_unk">未知物品</option></select>
 		<label for="flag1">旗子 1:</label>
@@ -96,7 +96,7 @@
 		<span>Shops</span>
 		<span>Others</span>
 	</div>
-	<button id="save-button" onclick="saveChanges()"><span class="sprite save-icon"></span> Save changes</button>
+	<button id="save-button" onclick="saveChanges()"><span class="sprite save-icon"></span> 保存更改</button>
 </div>
 
 
@@ -114,9 +114,9 @@
 
 <div id="tab-map">
 	<div style="float:right;width:360px">
-		<h3 class="no-separation">Buildings</h3>
+		<h3 class="no-separation"建筑</h3>
 		<ul id="buildings" class="building-list"></ul>
-		<div class="text-center"><button onclick="addBuilding()">Add building</button></div>
+		<div class="text-center"><button onclick="addBuilding()">添加建筑</button></div>
 	</div>
 	<div id="map-map" class="map"></div>
 
@@ -125,34 +125,34 @@
 	<button onclick="fillAll()">填充所有</button>
 	<button onclick="removeAll()">移除所有</button>
 	&nbsp;&nbsp;&nbsp;
-	<button onclick="MarcDialogs.open('maintenance')">Maintenance</button>
+	<button onclick="MarcDialogs.open('maintenance')">维护</button>
 	&nbsp;&nbsp;&nbsp;
 	<button onclick="tempFileLoadFunction=importMap; el('file-load').accept='.dat';el('file-load').click()">导入地图</button>
 
 	<div class="row">
 		<div class="column column-5">
-			<h3>Acres</h3>
+			<h3>村子大小</h3>
 			<div id="map-acres"></div>
 		</div>
 
 		<div class="column column-5">
-			<h3>Grass</h3>
+			<h3>草地面积</h3>
 			<div id="grass-quads"></div>
-			<label>Pencil size: <select id="select-grass-pencil-size" onchange="grassPencilSize=this.selectedIndex">
+			<label>铅笔粗细: <select id="select-grass-pencil-size" onchange="grassPencilSize=this.selectedIndex">
 				<option>1</option>
 				<option>2</option>
 				<option selected>3</option>
 				<option>4</option>
 			</select></label>
-			<label>Intensity: <select id="select-grass-intensity" onchange="grassPencilIntensity=((this.selectedIndex+1)*32)-1">
-				<option value="32">Min</option>
+			<label>颜色强度: <select id="select-grass-intensity" onchange="grassPencilIntensity=((this.selectedIndex+1)*32)-1">
+				<option value="32">最小</option>
 				<option value="64">2</option>
 				<option value="96">3</option>
 				<option value="128">4</option>
 				<option value="160">5</option>
 				<option value="192">6</option>
 				<option value="224">7</option>
-				<option value="255" selected>Max</option>
+				<option value="255" selected>最大</option>
 			</select></label>
 		</div>
 	</div>
@@ -170,7 +170,7 @@
 
 	<div class="row">
 		<div class="column column-4">
-			<h3 class="no-separation">Player info</h3>
+			<h3 class="no-separation">玩家信息</h3>
 			<table>
 				<tr>
 					<td><label for="player-name">Name/SID:</label></td>
@@ -247,7 +247,7 @@
 			</table>
 		</div>
 		<div class="column column-7">
-			<h3 class="no-separation">Items</h3>
+			<h3 class="no-separation">持有物品</h3>
 
 			<div class="row">
 				<div class="column column-12" id="pockets">Pockets: </div>
@@ -491,11 +491,11 @@
 <!-- DIALOGS -->
 <div id="dialog-disclaimer" class="dialog">
 	<b>Disclaimer</b><br/><br/>
-	This tool can damage your savegame if not used correctly.<br/>
-	You are responsible of any data lost.<br/><br/>
-	Be careful when editing your savegame, always keep a backup of your previous savegame.
+	如果你没有正确使用此工具，那么你的存档可能会损坏<br/>
+	你应该对丢失的任何数据负责。<br/><br/>
+	编辑您的存档游戏时要小心，请始终保留以前存档的备份。
 	<div class="buttons">
-		<button class="red" onclick="acceptDisclaimer()">I accept</button>
+		<button class="red" onclick="acceptDisclaimer()">我知道了，开始吧</button>
 	</div>
 </div>
 
