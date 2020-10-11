@@ -213,7 +213,7 @@
 					<td><select id="select-birthday-day"></select> <select id="select-birthday-month"></select></td>
 				</tr>
 				<tr>
-					<td>Registration:</td>
+					<td>注册时间:</td>
 					<td><select id="select-registration-day"></select> <select id="select-registration-month"></select> <select id="select-registration-year"></select></td>
 				</tr>
 				<tr>
@@ -229,7 +229,7 @@
 					<td><input type="text" id="input-medals"/></td>
 				</tr>
 				<tr id="tr-meowcoupons">
-					<td><label for="input-meow">MEOW coupons:</label></td>
+					<td><label for="input-meow">猫票:</label></td>
 					<td><input type="text" id="input-meow"/></td>
 				</tr>
 				<tr>
@@ -237,11 +237,11 @@
 					<td><button id="button-change-tpc" onclick="changeTPCPic()">变更</button></td>
 				</tr>
 				<tr>
-					<td>箱子:</td>
+					<td>可用的解锁（正常游玩请不要碰这个）:</td>
 					<td id="player-cheats">
-						<button onclick="currentPlayer.fillEncyclopedia()">Encyclopedia</button>
-						<button onclick="currentPlayer.unlockEmotions()">Emotions</button>
-						<button onclick="currentPlayer.fillCatalog()">Catalog</button>
+						<button onclick="currentPlayer.fillEncyclopedia()">百科全书</button>
+						<button onclick="currentPlayer.unlockEmotions()">情感</button>
+						<button onclick="currentPlayer.fillCatalog()">商品目录</button>
 					</td>
 				</tr>
 			</table>
@@ -270,17 +270,17 @@
 		<h3>房子外观</h3>
 		<div class="column column-5">
 			<table>
-				<tr><td><label for="select-house-style">House style:</label></td><td><select id="select-house-style"></select></td></tr>
-				<tr><td><label for="select-house-brick">House brick:</label></td><td><select id="select-house-brick"></select></td></tr>
-				<tr><td><label for="select-house-roof">House roof:</label></td><td><select id="select-house-roof"></select></td></tr>
+				<tr><td><label for="select-house-style">房子类型:</label></td><td><select id="select-house-style"></select></td></tr>
+				<tr><td><label for="select-house-brick">房子墙壁:</label></td><td><select id="select-house-brick"></select></td></tr>
+				<tr><td><label for="select-house-roof">房子屋顶:</label></td><td><select id="select-house-roof"></select></td></tr>
 				<tr><td>House door:</td><td><select id="select-house-doorshape"></select> <select id="select-house-door"></select></td></tr>
 			</table>
 		</div>
 		<div class="column column-5">
 			<table>
-				<tr><td><label for="select-house-fence">House fence:</label></td><td><select id="select-house-fence"></select></td></tr>
-				<tr><td><label for="select-house-pavement">House pavement:</label></td><td><select id="select-house-pavement"></select></td></tr>
-				<tr><td><label for="select-house-mailbox">House mailbox:</label></td><td><select id="select-house-mailbox"></select></td></tr>
+				<tr><td><label for="select-house-fence">房子围栏:</label></td><td><select id="select-house-fence"></select></td></tr>
+				<tr><td><label for="select-house-pavement">房屋路面:</label></td><td><select id="select-house-pavement"></select></td></tr>
+				<tr><td><label for="select-house-mailbox">房子邮箱:</label></td><td><select id="select-house-mailbox"></select></td></tr>
 			</table>
 		</div>
 	</div>
@@ -359,10 +359,10 @@
 		<tr><td>南岛商店:</td><td><div id="shop-island"></div></td></tr>
 		<tr><td>博物馆商店:</td><td><div id="shop-museum"></div></td></tr>
 		<tr><td>失物招领处:</td><td><div id="lostfound"></div></td></tr>
-		<tr><td>Club LOL gyroids:</td><td><div id="lol-gyroids"></div></td></tr>
+		<tr><td>444俱乐部:</td><td><div id="lol-gyroids"></div></td></tr>
 		<tr id="tr-shop-harvey"><td>Harvey:</td><td><div id="shop-harvey"></div></td></tr>
 		<tr>
-			<td>Turnip  prices:</td>
+			<td>大头菜价格:</td>
 			<td>
 				<table>
 					<tr><th></th><th>AM</th><th>PM</th></tr>
@@ -382,15 +382,15 @@
 
 <div id="tab-villagers" style="display:none">
 	<div class="row">
-		<h3 class="no-separation">Current villagers</h3>
+		<h3 class="no-separation">当前村民</h3>
 		<table id="villagers">
-			<tr><td></td><td></td><th>Wall</th><th>Floor</th><th>Song</th><th>Shirt</th><th>Umbrella</th><th>Furniture</th><th>Catchphrase</th></tr>
+			<tr><td></td><td></td><th>墙壁</th><th>地板</th><th>歌曲</th><th>衬衫</th><th>雨伞</th><th>家具</th><th>口头语</th></tr>
 		</table>
 	</div>
 
 	<div class="row">
 		<div class="column column-5">
-			<h3>当前村民</h3>
+			<h3>搬走的村民</h3>
 			<div class="row">
 				<div class="column column-6"><table id="past-villagers1"></table></div>
 				<div class="column column-6"><table id="past-villagers2"></table></div>
@@ -451,14 +451,14 @@
 					<td>Secure value:</td><td><span id="nand-value" class="mono"></span></td>
 				</tr>
 				<tr id="town-unlockhhd">
-					<td><abbr title="Happy Home Designer">HHD</abbr> content:</td>
-					<td><button onclick="town.unlockHHDContent();">Unlock</button></td>
+					<td><abbr title="Happy Home Designer">欢乐家园协会</abbr>连接:</td>
+					<td><button onclick="town.unlockHHDContent();">解锁</button></td>
 				</tr>
 				<tr>
 					<td>可用的 PWPs:</td>
 					<td>
 						<ul id="pwps-available" class="binary-list"></ul>
-						<button onclick="town.availablePWPs.setAll(true)">Unlock all</button>
+						<button onclick="town.availablePWPs.setAll(true)">解锁全部</button>
 					</td>
 				</tr>
 			</table>
@@ -500,12 +500,12 @@
 </div>
 
 <div id="dialog-secure-value" class="dialog">
-	Secure NAND value determines if the <b>garden.dat</b> savegame will be valid for your console.<br/>
-	If you want to use an old savegame, you will need to update its secure NAND value using your most up-to-date garden.dat file.<br/>
-	<b class="warning">Warning!</b> Use this at your own risk.
+	安全NAND值确定<b> garden.dat </b>保存游戏对于您的控制台是否有效。<br/>
+如果要使用旧的保存游戏，则需要使用最新的garden.dat文件更新其安全NAND值。<br/>
+	<b class="warning">警告！</b>使用此项后果自负。
 
 	<div class="buttons">
-		<button class="red" onclick="tempFileLoadFunction=changeSecureNANDValue; el('file-load').accept='.dat';el('file-load').click();MarcDialogs.close()">Update secure NAND value</button>
+		<button class="red" onclick="tempFileLoadFunction=changeSecureNANDValue; el('file-load').accept='.dat';el('file-load').click();MarcDialogs.close()">更新NAND安全值</button>
 		<button onclick="MarcDialogs.close()">Cancel</button>
 	</div>
 </div>
@@ -553,16 +553,16 @@
 </div>
 
 <div id="dialog-villager" class="dialog">
-	<label for="villager-new">New villager:</label> <select id="villager-new" onchange="el('villager-default').checked=true;refreshVillagerEdit();"></select> <span id="villager-pic"></span><br/>
-	Personality: <span id="villager-personality"></span><br/>
+	<label for="villager-new">新村民:</label> <select id="villager-new" onchange="el('villager-default').checked=true;refreshVillagerEdit();"></select> <span id="villager-pic"></span><br/>
+	个性: <span id="villager-personality"></span><br/>
 	<div id="villager-current-options">
-		<input type="checkbox" id="villager-default"/> <label for="villager-default">Set villager data to default (catchphrase, clothes and furniture)</label><br/>
-		<input type="checkbox" id="villager-boxed"/> <label for="villager-boxed">Boxed (will move next day)</label><br/>
+		<input type="checkbox" id="villager-default"/> <label for="villager-default">将村民数据设置为默认值（口头语，衣服和家具）</label><br/>
+		<input type="checkbox" id="villager-boxed"/> <label for="villager-boxed">盒装（第二天将移动）</label><br/>
 	</div>
 
 	<div class="buttons">
-		<button class="blue" onclick="acceptVillagerEdit()">Accept</button>
-		<button onclick="MarcDialogs.close()">Cancel</button>
+		<button class="blue" onclick="acceptVillagerEdit()"确定</button>
+		<button onclick="MarcDialogs.close()">取消</button>
 	</div>
 </div>
 
