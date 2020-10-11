@@ -114,7 +114,7 @@
 
 <div id="tab-map">
 	<div style="float:right;width:360px">
-		<h3 class="no-separation"建筑</h3>
+		<h3 class="no-separation">建筑</h3>
 		<ul id="buildings" class="building-list"></ul>
 		<div class="text-center"><button onclick="addBuilding()">添加建筑</button></div>
 	</div>
@@ -173,7 +173,7 @@
 			<h3 class="no-separation">玩家信息</h3>
 			<table>
 				<tr>
-					<td><label for="player-name">Name/SID:</label></td>
+					<td><label for="player-name">名字/SID:</label></td>
 					<td><input type="text" id="player-name" maxlength="9" onchange="currentPlayer.setName(this.value)" /> <span id="player-id" class="mono"></span></td>
 				</tr>
 				<tr>
@@ -491,9 +491,9 @@
 <!-- DIALOGS -->
 <div id="dialog-disclaimer" class="dialog">
 	<b>Disclaimer</b><br/><br/>
-	如果你没有正确使用此工具，那么你的存档可能会损坏<br/>
+	如果你没有正确使用此工具，那么你的存档可能会损坏。<br/>
 	你应该对丢失的任何数据负责。<br/><br/>
-	编辑您的存档游戏时要小心，请始终保留以前存档的备份。
+	<font color="red">编辑您的存档游戏时要小心，请始终保留以前存档的备份！</font>
 	<div class="buttons">
 		<button class="red" onclick="acceptDisclaimer()">我知道了，开始吧</button>
 	</div>
@@ -511,31 +511,31 @@
 </div>
 
 <div id="dialog-maintenance" class="dialog">
-	<input type="checkbox" id="remove-weeds" checked="checked" /> <label for="remove-weeds">Remove weeds</label><br/>
-	<input type="checkbox" id="water-flowers" checked="checked" /> <label for="water-flowers">Water flowers</label><br/>
-	<input type="checkbox" id="perfectize-trees" /> <label for="perfectize-trees">Add a perfect fruit to trees</label>
+	<input type="checkbox" id="remove-weeds" checked="checked" /> <label for="remove-weeds">移除所有杂草</label><br/>
+	<input type="checkbox" id="water-flowers" checked="checked" /> <label for="water-flowers">给所有的花浇水</label><br/>
+	<input type="checkbox" id="perfectize-trees" /> <label for="perfectize-trees">往所有的树上添加美味水果</label>
 
 	<div class="buttons">
-		<button class="blue" onclick="acceptMaintenance()">Accept</button>
-		<button onclick="MarcDialogs.close()">Cancel</button>
+		<button class="blue" onclick="acceptMaintenance()">确定</button>
+		<button onclick="MarcDialogs.close()">取消</button>
 	</div>
 </div>
 
 <div id="dialog-importmap" class="dialog">
-	<input type="checkbox" id="import-acres" /> <label for="import-acres">Import acres</label><br/>
-	<input type="checkbox" id="import-items" /> <label for="import-items">Import items</label><br/>
-	<input type="checkbox" id="import-grass" /> <label for="import-grass">Import grass</label><br/>
-	<input type="checkbox" id="import-buildings" /> <label for="import-buildings">Import buildings <small>(may need manually fixing)</small></label>
+	<input type="checkbox" id="import-acres" /> <label for="import-acres">导入村子</label><br/>
+	<input type="checkbox" id="import-items" /> <label for="import-items">导入物品</label><br/>
+	<input type="checkbox" id="import-grass" /> <label for="import-grass">导入草地</label><br/>
+	<input type="checkbox" id="import-buildings" /> <label for="import-buildings">导入建筑 <small>(may need manually fixing)</small></label>
 
 	<div class="buttons">
-		<button class="blue" onclick="acceptImportMap()">Accept</button>
-		<button onclick="MarcDialogs.close()">Cancel</button>
+		<button class="blue" onclick="acceptImportMap()">确定</button>
+		<button onclick="MarcDialogs.close()">取消</button>
 	</div>
 </div>
 
 <div id="dialog-acre" class="dialog">
 	Select an acre to replace.<br/>
-	<b class="warning">Warning!</b> An invalid acre structure might freeze the game while booting. <a href="help.html#Warnings" class="help" target="_blank">More info</a>
+	<b class="warning">警告！</b>无效的村子结构可能会在打开存档时造成死机。<a href="help.html#Warnings" class="help" target="_blank">更多信息</a>
 	<div id="acre-selector"></div>
 </div>
 
