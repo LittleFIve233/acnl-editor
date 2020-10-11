@@ -22,29 +22,29 @@
 <div id="home">
 	<div class="title">
 		<span class="logo"></span>
-		<h1>Animal Crossing: New Leaf Save Editor</h1>
+		<h1>动物之森存档修改器</h1>
 		<div class="author">
 			by <a href="http://www.marcrobledo.com" target="_blank">Marc Robledo</a> <span class="last-update">(last updated on 23th Apr 2020)</span>
 		</div>
 
 		<div id="help">
-			<a href="help.html" target="_blank">About</a> | 
+			<a href="help.html" target="_blank">关于</a> | 
 			<a href="help.html#Homebrew" target="_blank">How to</a> | 
-			<a href="https://github.com/marcrobledo/acnl-editor/releases">Download</a> | 
+			<a href="https://github.com/marcrobledo/acnl-editor/releases">查看或下载源码</a> | 
 			<a href="help.html#FAQ" target="_blank">FAQ</a>
 		</div>
 	</div>
 
 	<div id="blocks">
-		<div id="contribute"><a href="https://www.paypal.me/marcrobledo" target="_blank" rel="nofollow"><span>Feel free to contribute by making a donation!</span><span class="donate"><span class="sprite heart"></span> Donate</span></a></div>
+		<div id="contribute"><a href="https://www.paypal.me/marcrobledo" target="_blank" rel="nofollow"><span>Feel free to contribute by making a donation!</span><span class="donate"><span class="sprite heart"></span> 捐赠</span></a></div>
 
 		<div class="block block-warning center open" id="block-warning">
-			Use this tool at your own risk.<br/>
-			By using it, you are responsible of any data lost.
+			使用此工具的风险由你自己承担.<br/>
+			使用它，您要对丢失的任何数据负责。
 		</div>
 
 		<div class="block">
-			<label for="lang-selector">Select item language:</label> <span id="lang-flag" class="sprite flag flag-en"></span>
+			<label for="lang-selector">选择物品语言:</label> <span id="lang-flag" class="sprite flag flag-en"></span>
 			<select onchange="setCookie('lang',this.selectedIndex); updateLangIcon(this.selectedIndex)" id="lang-selector">
 				<option value="0" selected="selected">English</option>
 				<option value="enu">English (UK)</option>
@@ -89,12 +89,12 @@
 
 	<span class="logo"></span>
 	<div id="tab-selector">
-		<span class="active">Map</span>
-		<span>Players</span>
+		<span class="active">地图</span>
+		<span>玩家</span>
 		<span>Island</span>
-		<span>Villagers</span>
-		<span>Shops</span>
-		<span>Other</span>
+		<span>村民</span>
+		<span>商店</span>
+		<span>其他</span>
 	</div>
 	<button id="save-button" onclick="saveChanges()"><span class="sprite save-icon"></span> Save changes</button>
 </div>
