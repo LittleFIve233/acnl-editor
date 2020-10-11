@@ -358,7 +358,7 @@
 		<tr><td>勤奋姐妹裁缝店(饰品):</td><td><div id="shop-able2"></div></td></tr>
 		<tr><td>勤奋姐妹裁缝店(图画):</td><td><div id="labelle" class="patterns-labelle"></div></td></tr>
 		<tr><td>Kicks:</td><td><div id="shop-kicks"></div></td></tr>
-		<tr><td>Redd:</td><td><div id="shop-redd"></div></td></tr>
+		<tr><td>狐吉的赝品:</td><td><div id="shop-redd"></div></td></tr>
 		<tr><td>南岛商店:</td><td><div id="shop-island"></div></td></tr>
 		<tr><td>博物馆商店:</td><td><div id="shop-museum"></div></td></tr>
 		<tr><td>失物招领处:</td><td><div id="lostfound"></div></td></tr>
@@ -546,18 +546,18 @@
 	<img src="" id="pattern-preview"/><br/>
 	<span id="pattern-preview-title"></span>
 
-	<a href="https://www.thulinma.com/acnl/" target="_blank">Edit</a>
+	<a href="https://www.thulinma.com/acnl/" target="_blank">更改</a>
 	<div class="buttons">
 		<button onclick="el('file-load').accept='.acnl';el('file-load').click()">导入图画</button>
 		<button onclick="currentEditingItem.export()">导出图画</button>
-		<button id="button-pattern-steal" onclick="currentEditingItem.steal(currentPlayer)">Steal pattern</button>
+		<button id="button-pattern-steal" onclick="currentEditingItem.steal(currentPlayer)">保存图画</button>
 		<button onclick="MarcDialogs.close()">取消</button>
 	</div>
 </div>
 
 <div id="dialog-villager" class="dialog">
 	<label for="villager-new">新村民:</label> <select id="villager-new" onchange="el('villager-default').checked=true;refreshVillagerEdit();"></select> <span id="villager-pic"></span><br/>
-	Personality: <span id="villager-personality"></span><br/>
+	性格: <span id="villager-personality"></span><br/>
 	<div id="villager-current-options">
 		<input type="checkbox" id="villager-default"/> <label for="villager-default">将村民数据设置为默认值（口头语，衣服和家具）</label><br/>
 		<input type="checkbox" id="villager-boxed"/> <label for="villager-boxed">盒子 （第二天将会移除）</label><br/>
