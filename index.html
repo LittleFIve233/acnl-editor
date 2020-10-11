@@ -525,4 +525,51 @@
 </div>
 
 <div id="dialog-importmap" class="dialog">
-	<input type="checkbox" id="import>
+	<input type="checkbox" id="import-acres" /> <label for="import-acres">导入结构</label><br/>
+	<input type="checkbox" id="import-items" /> <label for="import-items">导入物品</label><br/>
+	<input type="checkbox" id="import-grass" /> <label for="import-grass">导入草地</label><br/>
+	<input type="checkbox" id="import-buildings" /> <label for="import-buildings">导入建筑<small>(可能需要手动修复)</small></label>
+
+	<div class="buttons">
+		<button class="blue" onclick="acceptImportMap()">确定</button>
+		<button onclick="MarcDialogs.close()">取消</button>
+	</div>
+</div>
+
+<div id="dialog-acre" class="dialog">
+	选择一个进行替换<br/>
+	<b class="warning">警告！</b> 无效的结构可能会在启动游戏时死机。<a href="help.html#Warnings" class="help" target="_blank">更多信息</a>
+	<div id="acre-selector"></div>
+</div>
+
+<div id="dialog-pattern" class="dialog">
+	<img src="" id="pattern-preview"/><br/>
+	<span id="pattern-preview-title"></span>
+
+	<a href="https://www.thulinma.com/acnl/" target="_blank">Edit</a>
+	<div class="buttons">
+		<button onclick="el('file-load').accept='.acnl';el('file-load').click()">Import pattern</button>
+		<button onclick="currentEditingItem.export()">Export pattern</button>
+		<button id="button-pattern-steal" onclick="currentEditingItem.steal(currentPlayer)">Steal pattern</button>
+		<button onclick="MarcDialogs.close()">取消</button>
+	</div>
+</div>
+
+<div id="dialog-villager" class="dialog">
+	<label for="villager-new">新村民:</label> <select id="villager-new" onchange="el('villager-default').checked=true;refreshVillagerEdit();"></select> <span id="villager-pic"></span><br/>
+	Personality: <span id="villager-personality"></span><br/>
+	<div id="villager-current-options">
+		<input type="checkbox" id="villager-default"/> <label for="villager-default">将村民数据设置为默认值（口头语，衣服和家具）</label><br/>
+		<input type="checkbox" id="villager-boxed"/> <label for="villager-boxed">盒子 （第二天将会移除）</label><br/>
+	</div>
+
+	<div class="buttons">
+		<button class="blue" onclick="acceptVillagerEdit()">确定</button>
+		<button onclick="MarcDialogs.close()">取消</button>
+	</div>
+</div>
+
+
+
+</body>
+</html>
