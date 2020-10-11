@@ -1,30 +1,29 @@
 # 动物之森存档修改器
-ACNL Save Editor lets you edit your Animal Crossing: New Leaf savegame. 
+动物之森存档修改器：让我们修改你的动森存档吧！ 
 
 ## 功能
-* can edit any ACNL savegame (including Welcome Amiibo)
-* can edit your town
-  * acres, river, waterfalls and ponds
-  * name, town hall and train station roof colors
-  * move buildings, houses, rocks and more at your own
-* can edit your player characters (name, face and gender, TPC pic, inventory and rooms)
-* can edit your villagers (animals, campsite and caravan zone)
-* other cool things
-  * put all perfect fruit trees in your town
-  * put both police stations in your town
-  * put anything in the beach, the river or the island
-  * put various plaza tree anywhere
-  * let Holden/Filly join your town
-  * get a tan even in winter
-  * change ground grass shape
-  * place unused players' patterns on ground
-  * ...and more!
+* 可以修改任何动物之森的存档 (包括 “一起来吧！动物之森！”)
+* 可以修改你的城镇
+  * 结构, 村公所和火车站的屋顶颜色
+  * 移动建筑, 房子, 石头以及更多在你村子里的东西
+* 可以编辑你的玩家角色 （名字, 脸型和性别, TPC照片, 库存和房间）
+* 可以修改你的村民 （动物, 露营地和房车）
+* 以及...其他更酷的事情！
+  * 放置所有的美味水果树在你村子里
+  * 放两个警察局在你的村子里
+  * 放任何东西在海滩、河里以及南岛上
+  * 将各种广场树放在任何地方
+  * 让 Holden/Filly 进入你的村子
+  * 即使在冬天也能晒黑
+  * 改变地面草的形状
+  * 将未使用的图画放置在地面上
+  * 还有...更多！！！
  
 ## 注意
-**This app can damage your savegame if not used correctly. I'm not responsible of any data lost.
-Be careful when editing your savegame, always keep a backup of your previous savegame.**
+**如果你没有正常使用此工具，那么你的存档可能会损坏。我对任何数据丢失概不负责。
+编辑您的存档游戏时要小心，请始终保留以前存档的备份！**
 
 ## 怎么导出或导入动物之森存档
-More info here:
+更多信息:
 [How to dump and inject AC:NL savegame](http://FIve201.github.io/acnl-editor/help.html#Howto)
 [FAQ](http://FIve201.github.io/acnl-editor/help.html#FAQ)
