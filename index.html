@@ -514,4 +514,15 @@
 </div>
 
 <div id="dialog-maintenance" class="dialog">
-	<input type=
+	<input type="checkbox" id="remove-weeds" checked="checked" /> <label for="remove-weeds">移除所有杂草</label><br/>
+	<input type="checkbox" id="water-flowers" checked="checked" /> <label for="water-flowers">给所有的花浇水</label><br/>
+	<input type="checkbox" id="perfectize-trees" /> <label for="perfectize-trees">往所有的树上添加美味水果</label>
+
+	<div class="buttons">
+		<button class="blue" onclick="acceptMaintenance()">确定</button>
+		<button onclick="MarcDialogs.close()">取消</button>
+	</div>
+</div>
+
+<div id="dialog-importmap" class="dialog">
+	<input type="checkbox" id="import>
