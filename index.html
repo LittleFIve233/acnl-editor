@@ -24,7 +24,7 @@
 		<span class="logo"></span>
 		<h1>动物之森存档修改器</h1>
 		<div class="author">
-			 作者：<a href="http://www.marcrobledo.com" target="_blank">Marc Robledo</a> 翻译：<a href="https://github.com/FIve201" target="_blank">FIve201</a> <span class="last-update">(最后更新于2020年8月23日，最后翻译于2020年10月11日)</span>
+			 作者：<a href="http://www.marcrobledo.com" target="_blank">Marc Robledo</a> 翻译：<a href="https://github.com/FIve201" target="_blank">FIve201</a> <span class="last-update">(最后更新于2020年8月23日，最后翻译于2020年10月12日)</span>
 		</div>
 
 		<div id="help">
@@ -41,12 +41,12 @@
 		<div id="contribute"><a href="pay.html" target="_blank" rel="nofollow"><span>如果对你有帮助请点击这里捐赠我</span><span class="donate"><span class="sprite heart"></span> 捐赠</span></a></div>
 
 		<div class="block block-warning center open" id="block-warning">
-			使用此工具的风险由你自己承担<br/>
-			使用它，你要对丢失的任何数据负责
+			使用此工具的风险由你自己承担：<br/>
+			使用此工具，丢失的所有数据都由你自己来承担
 		</div>
 
 		<div class="block">
-			<label for="lang-selector">选择物品语言:</label> <span id="lang-flag" class="sprite flag flag-en"></span>
+			<label for="lang-selector">选择物品语言：</label> <span id="lang-flag" class="sprite flag flag-en"></span>
 			<select onchange="setCookie('lang',this.selectedIndex); updateLangIcon(this.selectedIndex)" id="lang-selector">
 				<option value="0" selected="selected">English</option>
 				<option value="enu">English (UK)</option>
@@ -62,7 +62,7 @@
 			<hr/>
 			<span id="loading">正在加载修改器，请稍等</span>
 			<form id="loadform" style="display:none">
-				 从这里打开你的<u>garden.dat</u>或<u>garden_plus.dat</u>:<br/>
+				 从这里打开你的<u>garden.dat</u>或<u>garden_plus.dat</u>：<br/>
 				<input type="file" accept=".dat" onchange="loadSavegameFromFile(this.files[0])"/>
 			</form>
 		</div>
@@ -76,13 +76,13 @@
 		<input type="text" id="search-input" onkeyup="searchItem(this.value)" onfocus="showSearchResults();" placeholder="搜寻物品..." />
 		<ul id="search-results"></ul>
 		<label for="items">当前物品:</label> <select id="items" onchange="buildFlagsSelects(0,0);"><option value="32766" id="item_32766">-</option><option value="32764" id="item_32764">- (occupied room tile) -</option><option value="32766" id="item_unk">未知物品</option></select>
-		<label for="flag1">旗子 1:</label>
+		<label for="flag1">特殊标记 1：</label>
 		<input type="text" id="flag1" disabled="disabled" length="2" oninput="cleanFlagInput(1)" maxlength="2"/>
 		<select id="select-flag1" onchange="setFlag(1, parseInt(this.value))">
 			<option value="-1">自定义</option>
 			<option value="0" selected="selected">无</option>
 		</select>
-		<label for="flag2">旗子 2:</label>
+		<label for="flag2">特殊标记 2：</label>
 		<input type="text" id="flag2" disabled="disabled" length="2" oninput="cleanFlagInput(2)" maxlength="2" />
 		<select id="select-flag2" onchange="setFlag(2,parseInt(this.value))">
 			<option value="-1">自定义</option>
