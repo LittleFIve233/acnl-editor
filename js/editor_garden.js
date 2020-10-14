@@ -2331,16 +2331,16 @@ Player.prototype.importJPG=function(image){
 
 
 Player.prototype.unlockEmotions=function(){
-	MarcDialogs.confirm('Do you want to unlock all emotions for this player?', function(){
+	MarcDialogs.confirm('您解锁放此玩家的所有的表情吗？', function(){
 		var emotionsOffset=currentPlayer.offset+Offsets.PLAYER_EMOTIONS;
 		for(var i=0; i<Constants.ALL_EMOTIONS.length; i++){
 			savegame.writeU8(emotionsOffset+i, Constants.ALL_EMOTIONS[i]);
 		}
-		MarcDialogs.alert('Emotions were unlocked for this player.');
+		MarcDialogs.alert('该玩家的表情已全部解锁。');
 	});
 }
 Player.prototype.fillEncyclopedia=function(){
-	MarcDialogs.confirm('Do you want to fill encyclopedia up for this player?', function(){
+	MarcDialogs.confirm('您确定要填充此玩家的收集图鉴？', function(){
 		var encyclopediaOffset=currentPlayer.offset+Offsets.PLAYER_ENCYCLOPEDIA;
 		for(var i=0; i<Constants.FULL_ENCYCLOPEDIA.length; i++)
 			savegame.writeU8(encyclopediaOffset+i, Constants.FULL_ENCYCLOPEDIA[i]);
@@ -2348,7 +2348,7 @@ Player.prototype.fillEncyclopedia=function(){
 	});
 }
 Player.prototype.fillCatalog=function(){
-	MarcDialogs.confirm('Do you want to fill catalog up for this player?', function(){
+	MarcDialogs.confirm('你确定要解锁此玩家的商品目录么？', function(){
 		var catalogOffset=currentPlayer.offset+Offsets.PLAYER_CATALOG;
 		var maxInts=plusMode?106:56; //Non PlusMode size is only estimate
 		for(var i=0; i<maxInts; i++)
