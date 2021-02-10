@@ -41,21 +41,21 @@
 		<div id="contribute"><a href="pay.html" target="_blank" rel="nofollow"><span>如果对你有帮助请点击这里捐赠我</span><span class="donate"><span class="sprite heart"></span> 捐赠</span></a></div>
 
 		<div class="block block-warning center open" id="block-warning">
-			使用此工具的风险由你自己承担：<br/>
-			使用此工具，丢失的所有数据都由你自己来承担
+			使用此工具的所有风险由你自己承担：<br/>
+			使用此工具丢失数据都由你自己来承担
 		</div>
 
 		<div class="block">
 			<label for="lang-selector">选择物品语言：</label> <span id="lang-flag" class="sprite flag flag-en"></span>
 			<select onchange="setCookie('lang',this.selectedIndex); updateLangIcon(this.selectedIndex)" id="lang-selector">
-				<option value="0" selected="selected">English</option>
+				<option value="0" selected="selected">Simplified Chinese</option>
+				<option value="us">English</option>
 				<option value="enu">English (UK)</option>
 				<option value="fr">Français</option>
 				<option value="de">Deutsch</option>
 				<option value="it">Italiano</option>
 				<option value="es">Español</option>
 				<option value="jp">Japanese</option>
-				<option value="cn">Simplified Chinese</option>
 				<option value="kr">Korean</option>
 			</select>
 
@@ -128,7 +128,7 @@
 	<button onclick="fillAll()">填充所有</button>
 	<button onclick="removeAll()">移除所有</button>
 	&nbsp;&nbsp;&nbsp;
-	<button onclick="MarcDialogs.open('maintenance')">维护</button>
+	<button onclick="MarcDialogs.open('maintenance')">村内实施项目</button>
 	&nbsp;&nbsp;&nbsp;
 	<button onclick="tempFileLoadFunction=importMap; el('file-load').accept='.dat';el('file-load').click()">导入地图</button>
 
