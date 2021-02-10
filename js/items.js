@@ -120,7 +120,7 @@ var ITEM_GROUPS=[
 "tree (growing 2)",,
 "tree (growing 3)",,
 "tree (growing 4)",,
-"tree",,
+"树",,
 "cedar (growing 1)",,
 "cedar (growing 2)",,
 "cedar (growing 3)",,
