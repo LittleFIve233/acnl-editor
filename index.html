@@ -500,12 +500,12 @@
 </div>
 
 <div id="dialog-secure-value" class="dialog">
-	安全NAND值确定<b> garden.dat </b>保存游戏对于您的控制台是否有效。<br/>
-如果要使用旧的保存游戏，则需要使用最新的garden.dat文件更新安全值。<br/>
-	<b class="warning">警告！</b>使用此项后果自负。
+	 请确定<b> garden.dat </b>文件的安全值是否对你的主机有效。<br/>
+如果要使用旧的存档，则需要使用最新的garden.dat文件更新或使用FBI删除安全值！<br/>
+	<b class="warning">警告！</b>使用此项后果自负！
 
 	<div class="buttons">
-		<button class="red" onclick="tempFileLoadFunction=changeSecureNANDValue; el('file-load').accept='.dat';el('file-load').click();MarcDialogs.close()">更新NAND安全值</button>
+		<button class="red" onclick="tempFileLoadFunction=changeSecureNANDValue; el('file-load').accept='.dat';el('file-load').click();MarcDialogs.close()">更新安全值</button>
 		<button onclick="MarcDialogs.close()">取消</button>
 	</div>
 </div>
