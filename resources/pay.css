@@ -1,6 +1,6 @@
 img {
     position: absolute;
-    top: 100%;
-    left: 100%;
-    transform: translate(-100%,-100%);
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
