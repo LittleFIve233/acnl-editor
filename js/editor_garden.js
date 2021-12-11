@@ -3,6 +3,7 @@
 	by Marc Robledo 2015-2020
 
 	A lot of thanks to:
+	
 	 * SciresM for breaking the numeric encryption used in the game
 	 * kwsch and Mega-Mew for their work in NLSE
 	 * Thulinma for Pattern structure (check out his editor pattern http://www.thulinma.com/acnl/ )
@@ -259,8 +260,8 @@ const OffsetsPlus={
 const Constants={
 	Strings:{
 		PERSONALITIES:['&#9794; lazy','&#9794; jock','&#9794; cranky','&#9794; smug','&#9792; normal','&#9792; peppy','&#9792; snooty','&#9792; uchi'],
-		BADGES:['Fishes','Bugs','Marine','Fish collection','Bug collection','Marine collection','Balloons','Visiting other towns','Being visited','Watering flowers','Bank','Turnips','Medals','StreetPass','Weeds','Shopping','Letters','Refurbishing','Catalog','K.K. Slider','Home points','Time played','Helping neighbors','Dream Suite'],
-		WARNING_MESSAGE:'<small><b class="warning">Warning!</b> this feature is experimental.<br/>Use it at your own risk.</small>'
+		BADGES:['鱼类','Bugs','Marine','Fish collection','Bug collection','Marine collection','气球','Visiting other towns','Being visited','Watering flowers','银行','Turnips','Medals','瞬缘连接','Weeds','商品目录','信件','Refurbishing','Catalog','K.K. Slider','Home points','游玩时间','Helping neighbors','Dream Suite'],
+		WARNING_MESSAGE:'<small><b class="warning">Warning!</b>此功能不稳定<br/>需要你自担风险使用它</small>'
 	},
 
 	FULL_ENCYCLOPEDIA:[0xcc,0xfc,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xd0,0x9a],
@@ -319,7 +320,8 @@ function toggle(e){if(el(e).style.display=='block')hide(e);else show(e)}
 function addEvent(e,ev,f){if(e.addEventListener){e.addEventListener(ev,f,false);return true}else if(e.attachEvent)e.attachEvent('on'+ev,f)}
 
 function prevent(evt){evt.stopPropagation();evt.preventDefault()}
-function stopPropagation(e){if(typeof e.stopPropagation!='undefined')e.stopPropagation();else e.cancelBubble=true}
+function stopPropagation(e){if(typeof e.stopPropagation!='undefined')e.stopPropagation();else e.
+Bubble=true}
 function setCookie(k,v,w){var exp;if(w){exp=new Date((new Date()).getTime()+1000*60*60*24*7).toGMTString()}else{exp='Thu, 31 Dec 2020 12:00:00 UTC'}document.cookie='acnleditor'+k+'='+v+'; expires='+exp}
 function getCookie(k){var cs=document.cookie.split(';');for(var i=0;i<cs.length;i++){var f=cs[i].indexOf(k+'=');if(f>-1)return cs[i].substring(f+(k+'=').length)}return false}
 function getString(o){
@@ -339,7 +341,7 @@ function getString(o){
 function intToHex(i,b){var h=i.toString(16);while(h.length<b*2)h='0'+h;return h}
 function range(min,max){var a=[];for(i=min;i<=max;i++)a.push(i);return a}
 function random(v){return Math.floor((Math.random()*v))}
-function showTab(evt){var newTab=evt.target.tabInfo;if(newTab.id!==currentTab.id){hide('tab-'+currentTab.id);currentTab.button.className='';show('tab-'+newTab.id);newTab.button.className='active';currentTab=newTab}}
+function showTab(evt){var newTab=evt.target.tabInfo;if(newTab.id!==currentTab.id){hide('tab-'+currentTab.id);currentTab.button.className='';show('标签-'+newTab.id);newTab.button.className='行为';currentTab=newTab}}
 function updateLangIcon(l){el('lang-flag').style.backgroundPosition='-'+(l*16)+'px 0px'}
 function acceptDisclaimer(updateCookie){setCookie('nodisclaimer',1,true);MarcDialogs.close()}
 
@@ -2331,29 +2333,29 @@ Player.prototype.importJPG=function(image){
 
 
 Player.prototype.unlockEmotions=function(){
-	MarcDialogs.confirm('您解锁放此玩家的所有的表情吗？', function(){
+	MarcDialogs.confirm('你确定要解锁该玩家的所有的表情吗？', function(){
 		var emotionsOffset=currentPlayer.offset+Offsets.PLAYER_EMOTIONS;
 		for(var i=0; i<Constants.ALL_EMOTIONS.length; i++){
 			savegame.writeU8(emotionsOffset+i, Constants.ALL_EMOTIONS[i]);
 		}
-		MarcDialogs.alert('该玩家的表情已全部解锁。');
+		MarcDialogs.alert('该玩家的表情已全部解锁');
 	});
 }
 Player.prototype.fillEncyclopedia=function(){
-	MarcDialogs.confirm('您确定要填充此玩家的收集图鉴？', function(){
+	MarcDialogs.confirm('你确定要填充该玩家的收集图鉴吗？', function(){
 		var encyclopediaOffset=currentPlayer.offset+Offsets.PLAYER_ENCYCLOPEDIA;
 		for(var i=0; i<Constants.FULL_ENCYCLOPEDIA.length; i++)
 			savegame.writeU8(encyclopediaOffset+i, Constants.FULL_ENCYCLOPEDIA[i]);
-		MarcDialogs.alert('Encyclopedia was filled for this player.');
+		MarcDialogs.alert('该玩家的收集图鉴已全部解锁');
 	});
 }
 Player.prototype.fillCatalog=function(){
-	MarcDialogs.confirm('你确定要解锁此玩家的商品目录么？', function(){
+	MarcDialogs.confirm('你确定要解锁此玩家的商品目录吗？', function(){
 		var catalogOffset=currentPlayer.offset+Offsets.PLAYER_CATALOG;
 		var maxInts=plusMode?106:56; //Non PlusMode size is only estimate
 		for(var i=0; i<maxInts; i++)
 			savegame.writeU32(catalogOffset+i*4, 0xffffffff);
-		MarcDialogs.alert('Catalog was filled for this player.');
+		MarcDialogs.alert('此玩家的商品目录已全部解锁');
 	});
 }
 
@@ -2365,10 +2367,10 @@ function changeTPCPic(){
 }
 function changeTPCPic2(){
 	if((tempFile.readU32(0) & 0x00ffffff)!==0x00ffd8ff){
-		MarcDialogs.alert('Invalid pic file (must be a valid JPG file. dimensions: 64x104, max size: 4kb).');
+		MarcDialogs.alert('图片文件无效 (必须是有效的 JPG 文件 dimensions: 64x104, max size: 4kb).');
 		return false
 	}else if(tempFile.fileSize>5024){
-		MarcDialogs.alert('Too big JPG file (>5024 bytes).');
+		MarcDialogs.alert('图片文件太大 (>5024 字节).');
 		return false
 	}
 	var reader=new FileReader();
