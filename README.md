@@ -24,9 +24,7 @@
 **如果你没有正常使用此工具，那么你的存档可能会损坏。我对任何数据丢失概不负责。
 </br><font color="red">编辑您的存档游戏时要小心，请始终保留以前存档的备份！</red>**
 
-## 怎么导出或导入动物之森存档
-更多信息:
-<br />
+## 更多……
 [怎么导入或导出存档](http://FIve201.github.io/acnl-editor/help.html#Howto)
 <br />
 [难疑解答](http://FIve201.github.io/acnl-editor/help.html#FAQ)
