@@ -318,10 +318,8 @@ function show(e){el(e).style.display='block'}
 function hide(e){el(e).style.display='none'}
 function toggle(e){if(el(e).style.display=='block')hide(e);else show(e)}
 function addEvent(e,ev,f){if(e.addEventListener){e.addEventListener(ev,f,false);return true}else if(e.attachEvent)e.attachEvent('on'+ev,f)}
-
 function prevent(evt){evt.stopPropagation();evt.preventDefault()}
-function stopPropagation(e){if(typeof e.stopPropagation!='undefined')e.stopPropagation();else e.
-Bubble=true}
+function stopPropagation(e){if(typeof e.stopPropagation!='undefined')e.stopPropagation();else e.Bubble=true}
 function setCookie(k,v,w){var exp;if(w){exp=new Date((new Date()).getTime()+1000*60*60*24*7).toGMTString()}else{exp='Thu, 31 Dec 2020 12:00:00 UTC'}document.cookie='acnleditor'+k+'='+v+'; expires='+exp}
 function getCookie(k){var cs=document.cookie.split(';');for(var i=0;i<cs.length;i++){var f=cs[i].indexOf(k+'=');if(f>-1)return cs[i].substring(f+(k+'=').length)}return false}
 function getString(o){
@@ -341,7 +339,7 @@ function getString(o){
 function intToHex(i,b){var h=i.toString(16);while(h.length<b*2)h='0'+h;return h}
 function range(min,max){var a=[];for(i=min;i<=max;i++)a.push(i);return a}
 function random(v){return Math.floor((Math.random()*v))}
-function showTab(evt){var newTab=evt.target.tabInfo;if(newTab.id!==currentTab.id){hide('tab-'+currentTab.id);currentTab.button.className='';show('标签-'+newTab.id);newTab.button.className='行为';currentTab=newTab}}
+function showTab(evt){var newTab=evt.target.tabInfo;if(newTab.id!==currentTab.id){hide('tab-'+currentTab.id);currentTab.button.className='';show('tab-'+newTab.id);newTab.button.className='行为';currentTab=newTab}}
 function updateLangIcon(l){el('lang-flag').style.backgroundPosition='-'+(l*16)+'px 0px'}
 function acceptDisclaimer(updateCookie){setCookie('nodisclaimer',1,true);MarcDialogs.close()}
 
